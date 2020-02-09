@@ -3,9 +3,13 @@ using System;
 
 namespace Basement
 {
-    public class Structs : IProceed
+    public partial class Structs : IProceed
     {
-        struct CustomStruct
+        struct OldStruct
+        {
+        }
+        // no inheritance
+        struct CustomStruct 
         {
             int _arg;
             public CustomStruct(int arg)
