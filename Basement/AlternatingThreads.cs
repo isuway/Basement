@@ -16,9 +16,9 @@ namespace Basement
         private void Run1()
         {
             TickTock tt = new TickTock();
-            MyThread mtl = new MyThread("Tick", tt);
+            MyThread mt1 = new MyThread("Tick", tt);
             MyThread mt2 = new MyThread("Tock", tt);
-            mtl.Thrd.Join();
+            mt1.Thrd.Join();
             mt2.Thrd.Join();
             Console.WriteLine("Timer stopped");
         }
