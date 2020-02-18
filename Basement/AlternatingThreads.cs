@@ -33,7 +33,8 @@ namespace Basement
             {
                 if (!running)
                 { // остановить часы 
-                    Monitor.Pulse(lockOn); // уведомить любые ожидающие потоки return;
+                    Monitor.Pulse(lockOn); // уведомить любые ожидающие потоки 
+                    return;
                 }
                 Console.Write("Tick ");
                 Monitor.Pulse(lockOn); // разрешить выполнение метода Tock() 
@@ -46,7 +47,8 @@ namespace Basement
             {
                 if (!running)
                 { // остановить часы
-                    Monitor.Pulse(lockOn); // уведомить любые ожидающие потоки return;
+                    Monitor.Pulse(lockOn); // уведомить любые ожидающие потоки 
+                    return;
                 }
                 Console.WriteLine("Tock ");
                 Monitor.Pulse(lockOn); // разрешить выполнение метода Tick() 
